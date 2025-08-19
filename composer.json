@@ -29,8 +29,9 @@
     "prefer-stable": true,
     "keywords": [
         "laravel",
+        "laravel-form-builder",
+        "laravel form builder",
         "formbuilder",
-        "forms",
         "form builder",
         "drag and drop"
     ],

@@ -5,5 +5,5 @@ return [
     'route_prefix' => 'formbuilder',
     'admin_middleware' => ['web'],
     'form_middleware' => ['web'],
-    'layout' => 'formbuilder::layouts.app',
+    'layout' => 'ogformbuilder::layouts.app',
 ];

@@ -9,18 +9,15 @@ A simple and customizable Drag & Drop Form Builder package for Laravel, develope
 1. **Install via Composer**
 
 ```bash
-composer require ogwebsolutions/formbuilder
+composer require ogwebsolutions/laravel-form-builder
 
-2. Publish Assets
+2. Publish Config
 
-php artisan vendor:publish --provider="Ogwebsolutions\Formbuilder\FormBuilderServiceProvider"
+php artisan vendor:publish --tag="ogformbuilder-config"
 
 This will publish:
 
-Configuration files (config/ogformbuilder.php, recaptcha.php, hcaptcha.php)
-Views to resources/views/vendor/formbuilder
-Public assets (icons/images)
-Migrations to your database/migrations folder
+Configuration files (ogformbuilder.php, recaptcha.php, hcaptcha.php)
 
 3. Run Migrations
 
@@ -37,6 +34,7 @@ Live form rendering
 Field-level validation
 Form submission tracking
 
+
 🛠 Configuration
 
 **Custom Layout Customization**
@@ -48,6 +46,8 @@ To override the default layout, update the config file:
 return [
     'layout' => 'layouts.app', // Your custom layout
 ];
+
+You can also customize the url, route name and middleware in the config file.
 
 Ensure your layout includes:
 
@@ -69,9 +69,16 @@ You can switch between CAPTCHA types in form settings.
 🚀 Usage
 
 **Form Creation**
-Go to /formbuilder/forms
+**Create a Form**
+Go to /formbuilder
 Click “Create New Form”
-Drag fields, adjust settings, save
+Drag fields, configure settings, save
+**Manage Forms**
+View all forms at /formbuilder
+Edit or delete forms
+**Form Settings**
+Customize form fields, validation, CAPTCHA
+
 Embed a Form
 
 To render the form on your frontend: @ogRenderForm($formId)
@@ -81,9 +88,9 @@ Example: Use @ogRenderForm(1) to render form with ID 1.
 
 **Override Views**
 To override views:
-php artisan vendor:publish --tag=formbuilder-views
+php artisan vendor:publish --tag=ogformbuilder-views
 You can now customize views under:
-resources/views/vendor/formbuilder/
+resources/views/vendor/ogformbuilder/
 
 **Listen to Events (Coming Soon)**
 Events like FormSubmitted, FormSaved, etc. will be available to hook into.
@@ -98,6 +105,6 @@ This package is open-source software licensed under the MIT license.
 
 📬 Support
 
-For support, please contact OG Web Solutions(https://www.ogwebsolutions.com/contact-us/) or email info@ogwebsolutions.com
+For support, please email support@ogwebsolutions.com
 
 
