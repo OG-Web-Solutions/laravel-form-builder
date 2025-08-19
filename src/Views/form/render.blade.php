@@ -8,7 +8,7 @@
         @csrf
 
         @foreach ($form->fields as $field)
-            @include('formbuilder::form.fields.' . $field['type'], ['field' => $field])
+            @include('ogformbuilder::form.fields.' . $field['type'], ['field' => $field])
         @endforeach
 
     </form>
