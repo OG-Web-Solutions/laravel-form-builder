@@ -15,13 +15,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Ogwebsolutions\\Formbuilder\\": "src/"
+            "Ogwebsolutions\\FormBuilder\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Ogwebsolutions\\Formbuilder\\FormBuilderServiceProvider"
+                "Ogwebsolutions\\FormBuilder\\FormBuilderServiceProvider"
             ]
         }
     },
