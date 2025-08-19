@@ -15,12 +15,12 @@ class FormController extends Controller
     public function index()
     {
         $forms = OgForm::latest()->paginate(10); // Paginate 10 forms per page
-        return view('formbuilder::index', compact('forms'));
+        return view('ogformbuilder::index', compact('forms'));
     }
 
     public function create()
     {
-        return view('formbuilder::builder');
+        return view('ogformbuilder::builder');
     }
 
     public function store(Request $request)
@@ -74,7 +74,7 @@ class FormController extends Controller
 
         $form = OgForm::findOrFail($id);
         $settings = OgFormSetting::firstOrNew(['og_form_id' => $form->id]);
-        return view('formbuilder::settings', compact('form', 'settings'));
+        return view('ogformbuilder::settings', compact('form', 'settings'));
     }
     public function saveSettings(Request $request, $id)
     {
@@ -158,7 +158,7 @@ class FormController extends Controller
     public function edit($id)
     {
         $form = OgForm::findOrFail($id);
-        return view('formbuilder::edit', compact('form'));
+        return view('ogformbuilder::edit', compact('form'));
     }
 
     public function update(Request $request, $id)

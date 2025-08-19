@@ -33,7 +33,7 @@ class FormBuilderServiceProvider extends ServiceProvider
 
         // Blade directive
         Blade::directive('ogRenderForm', function ($id) {
-            return "<?php echo view('formbuilder::form.render', ['form' => \\Ogwebsolutions\\FormBuilder\\Models\\OgForm::whereId($id)->where('status', 'active')->first()])->render(); ?>";
+            return "<?php echo view('ogformbuilder::form.render', ['form' => \\Ogwebsolutions\\FormBuilder\\Models\\OgForm::whereId($id)->where('status', 'active')->first()])->render(); ?>";
         });
     }
 

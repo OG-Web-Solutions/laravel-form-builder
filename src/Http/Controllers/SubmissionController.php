@@ -59,7 +59,7 @@ class SubmissionController extends Controller
             ? $allLabels->filter(fn($label) => $visibleLabels->contains($label))->values()
             : $allLabels->take(5);
 
-        return view('formbuilder::submissions', [
+        return view('ogformbuilder::submissions', [
             'submissions' => $submissions,
             'form' => $form,
             'uniqueLabels' => $displayedLabels, // for table columns
@@ -71,7 +71,7 @@ class SubmissionController extends Controller
     public function show($id)
     {
         $submission = OgFormSubmission::with('values.largeValue')->findOrFail($id);
-        return view('formbuilder::submissions.show', compact('submission'));
+        return view('ogformbuilder::submissions.show', compact('submission'));
     }
 
     public function destroy($id)
